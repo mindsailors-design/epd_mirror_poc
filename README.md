@@ -1,10 +1,10 @@
 # Screen mirroring python script for use with epaper display as a monitor via GPIO (SPI)
 
-## This repo is only a proof of concept project, not even a first prototype.
+## ***This repo is only a proof of concept project, not even a first prototype.***
 
 ## Used display with driver and converter board from adafruit:
-https://www.waveshare.com/6inch-HD-e-Paper-HAT.htm
-Documentation:
+https://www.waveshare.com/6inch-HD-e-Paper-HAT.htm \
+Documentation: \
 https://www.waveshare.com/wiki/6inch_HD_e-Paper_HAT#Working_with_Raspberry_Pi_.28SPI.29
 
 ## Display driver based on this github project:
