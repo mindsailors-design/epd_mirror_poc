@@ -1,0 +1,19 @@
+[Unit]
+Description=Python script for mirroring screen to an epaper display
+After=graphical.target spi.target
+Wants=spi.target
+Requires=graphical.target
+
+[Service]
+Environment="DISPLAY=:0"
+WorkingDirectory=/home/jaca/IT8951/test/integration
+Type=simple
+Restart=always
+RestartSec=10
+ExecStartPre=/bin/sleep 10
+ExecStart=/bin/bash -c '/home/jaca/IT8951/env/bin/python /home/jaca/IT8951/test/integration/epd_mirror.py >> /home/jaca/log.txt 2>&1'
+User=jaca
+
+
+[Install]
+WantedBy=graphical.target
