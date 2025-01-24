@@ -64,14 +64,13 @@ def display_gradient(display):
 
     display.draw_partial(constants.DisplayModes.DU)
 
-def display_image_8bpp(display):
-    img_path = 'images/sleeping_penguin.png'
-    print('Displaying "{}"...'.format(img_path))
+def display_image_8bpp(display, image_buffer):
+    print("Displaying image from buffer")
 
     # clearing image to white
     display.frame_buf.paste(0xFF, box=(0, 0, display.width, display.height))
 
-    img = Image.open(img_path)
+    img = Image.frombuffer("L", (1448, 1072), image_buffer, "raw", "L", 0, 1)
 
     # TODO: this should be built-in
     dims = (display.width, display.height)
